@@ -1,0 +1,38 @@
+<!-- firstName:string = "";
+  lastName:string = "";
+  address:string = "";
+  postcode:string = "";
+  dateOfBirth:string = "";
+  email:string = ""; -->
+
+<main>
+
+  <form>
+    <label for="firstName">First Name</label>
+    <input type="text" name="firstName" id="firstName" placeholder="First Name" [(ngModel)]="firstName">
+
+    <label for="lastName">Last Name</label>
+    <input type="text" name="lastName" id="lastName" placeholder="Surname" [(ngModel)]="lastName">
+
+    <label for="address">Address Line 1</label>
+    <input type="text" name="address" id="address" placeholder="First line of address" [(ngModel)]="address">
+
+    <label for="postcode">Postcode</label>
+    <input type="text" name="postcode" id="postcode" placeholder="Postcode" [(ngModel)]="postcode">
+
+
+    <label for="dateOfBirth">Date of Birth</label>
+    <input type="text" name="dateOfBirth" id="dateOfBirth" placeholder="Your Date of Birth" [(ngModel)]="dateOfBirth">
+
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" placeholder="Email" [(ngModel)]="email">
+
+    <!--create new user-->
+    <button (click)="collectBody()">Submit</button>
+    <p>{{body | json}}</p>
+
+  </form>
+
+</main>
+<!-- footer -->
+<app-footer></app-footer>

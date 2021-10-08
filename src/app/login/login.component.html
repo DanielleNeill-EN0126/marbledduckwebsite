@@ -1,0 +1,21 @@
+<main>
+    <h5>Login Component</h5>
+
+    <form>
+        <label for="">Username = Bob, Password = Bob</label>
+      
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" placeholder="username" [(ngModel)]="username">
+   
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password" placeholder="password" [(ngModel)]="password">
+
+      
+        <button (click)="logIn()">Log In</button>
+        <p>{{loginStatus}}</p>
+    </form>
+
+</main>
+
+  <!-- footer -->
+  <app-footer></app-footer>
