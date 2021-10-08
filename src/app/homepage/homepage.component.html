@@ -1,19 +1,53 @@
 <main>
-    <div class="container text-center" id="home-container">
-  
-      <h1 class="title mt-4">Welcome to Marbled Duck Claims</h1>
-  
-      <div class="img-container">
-        <img width="300" alt="Duck" src="assets/img/aflacduck2.png">
-      </div>
-  
-      <h4 class="text-center my-4">I hope you haven’t quacked any bones!</h4>
-      <h6>Click the button below to make a claim.</h6>
-  
-      <button class="btn mx-auto mt-3">Start claim</button>
-  
-    </div>
-  </main>
+  <div class="container text-center" id="home-container">
 
-  <!-- footer -->
+    <header>
+      <h1 class="mt-4">Welcome to Marbled Duck Claims</h1>
+    </header>
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/img/signup.jpg" class="d-block w-100" alt="...">
+        </div>
+        <!-- <div class="carousel-item">
+          <img src="assets/img/signup.jpg" class="d-block w-100" alt="...">
+        </div> -->
+        <!-- <div class="carousel-item">
+          <img src="assets/img/hospitalduck.jfif" class="d-block w-100" alt="...">
+        </div> -->
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="reg-div">
+     <!-- registration link at the min - will relocate later -->
+     <a class="nav-link reg-btn" routerLink='/register' routerLinkActive="active"><i class='text-white fas fa-user-plus'></i> Register</a>
+    </div>
+
+    <div class="img-container">
+      <img width="300" alt="Duck" src="assets/img/aflacduck2.png">
+    </div>
+
+    <h4 class="text-center my-4">I hope you haven’t quacked any bones!</h4>
+
+    <button class="btn mx-auto mt-3">Start claim</button>
+
+  </div>
+
+
+
+</main>
+
+<!-- footer -->
 <app-footer></app-footer>

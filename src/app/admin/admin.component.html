@@ -1,0 +1,67 @@
+<main class="container-fluid">
+
+  <header>
+    <h1>Welcome admin</h1>
+  </header>
+
+  <!-- <button id="btnGetAll" (click)='getAllCustomers()'>Get all Customers</button>
+
+
+  <button (click)='getAllClaims()'>Get all Claims</button>
+  <p>{{claim | json}}</p>  -->
+
+    <section>
+      <h2>All Customers</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Address</th>
+            <th scope="col">Postcode</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+    
+        <tbody>
+          <!-- <p >{{myCustomers | json}}</p>  -->
+          <tr *ngFor='let customer of myCustomers'>
+            <td>{{customer.firstName}} {{customer.lastName}}</td>
+            <td>{{customer.dateOfBirth}}</td>
+            <td>{{customer.address}}</td>
+            <td>{{customer.postcode}}</td>
+            <td><a>View</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>All Claims</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Claim ID</th>
+            <th scope="col">Claim Type</th>
+            <th scope="col">Customer ID</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+    
+        <tbody>
+          <tr *ngFor='let clai of claim'>
+            <td>{{clai.claimId}}</td>
+            <td>{{clai.claimType}}</td>
+            <td>{{clai.customerId}}</td>
+            <td><a>View</a></td>
+            <td><a>Delete</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+
+</main>
+
+<!--footer-->
+<app-footer></app-footer>

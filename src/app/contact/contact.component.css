@@ -12,3 +12,29 @@
     padding-top: 30px;
     color: #333;
   }
+
+  #contactus-page {
+    width: 80%;
+}
+
+#contactus-form {
+    width: 90%;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #333;
+    font-size: 1.2rem;
+}
+
+#contactus-form label,
+#contactus-form input,
+#contactus-form textarea{
+    font-size: 1.2rem;
+}
+
+#contactus-form label {
+    font-weight: bold;
+}
+
+.message{
+    margin-top: 35px;
+}

@@ -1,38 +1,47 @@
-<!-- firstName:string = "";
-  lastName:string = "";
-  address:string = "";
-  postcode:string = "";
-  dateOfBirth:string = "";
-  email:string = ""; -->
+<main class="container-fluid">
 
-<main>
+  <header>
+    <div style="width: 50%; float: left;">
+    <h1 class="header-title">Join our brood</h1>
+    </div>
 
-  <form>
-    <label for="firstName">First Name</label>
-    <input type="text" name="firstName" id="firstName" placeholder="First Name" [(ngModel)]="firstName">
+    <div class="img-container">
+      <img width="200" alt="Duck" src="assets/img/aflacduck1.png">
+    </div>
+  </header>
 
-    <label for="lastName">Last Name</label>
-    <input type="text" name="lastName" id="lastName" placeholder="Surname" [(ngModel)]="lastName">
+  <div class="login-container">
+    <div class="login-register">
+      <h1 class="mb-3">Register</h1>
 
-    <label for="address">Address Line 1</label>
-    <input type="text" name="address" id="address" placeholder="First line of address" [(ngModel)]="address">
+      <form class="form-group mt-4">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" placeholder="First Name" [(ngModel)]="firstName">
+        <br>
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName" placeholder="Surname" [(ngModel)]="lastName">
+        <br>
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" placeholder="First line of address" [(ngModel)]="address">
+        <br>
+        <label for="postcode">Postcode</label>
+        <input type="text" name="postcode" id="postcode" placeholder="Postcode" [(ngModel)]="postcode">
+        <br>
+        <label for="dateOfBirth">Date of Birth</label>
+        <input type="text" name="dateOfBirth" id="dateOfBirth" placeholder="Your Date of Birth"
+          [(ngModel)]="dateOfBirth">
+        <br>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="Email" [(ngModel)]="email">
+        <br>
+        <!--create new user-->
+        <button class="btn mt-3" (click)="collectBody()">Submit</button>
+        <p>{{body | json}}</p>
+      </form>
 
-    <label for="postcode">Postcode</label>
-    <input type="text" name="postcode" id="postcode" placeholder="Postcode" [(ngModel)]="postcode">
-
-
-    <label for="dateOfBirth">Date of Birth</label>
-    <input type="text" name="dateOfBirth" id="dateOfBirth" placeholder="Your Date of Birth" [(ngModel)]="dateOfBirth">
-
-    <label for="email">Email</label>
-    <input type="text" name="email" id="email" placeholder="Email" [(ngModel)]="email">
-
-    <!--create new user-->
-    <button (click)="collectBody()">Submit</button>
-    <p>{{body | json}}</p>
-
-  </form>
-
+    </div>
+  </div>
 </main>
+
 <!-- footer -->
 <app-footer></app-footer>

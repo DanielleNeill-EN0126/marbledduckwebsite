@@ -1,1 +1,55 @@
-<p>dashboard works!</p>
+<main class="container-fluid">
+
+    <header class="mb-4">
+        <h1>Welcome back {{thisCustomer.firstName}}</h1>
+    </header>
+
+    <section>
+        <h2 class="mb-4">My details</h2>
+
+            <div style="width: 50%; float: left;">
+            <p>Name: {{thisCustomer.firstName}} {{thisCustomer.lastName}}</p>
+            <p>Date of birthday: {{thisCustomer.dateOfBirth}}</p>
+            <p>Address: {{thisCustomer.address}}</p>
+            <p>{{thisCustomer.postcode}}</p>
+            <p>Policy number: 789JK456 </p>
+            </div>
+            
+            <div class="img-container">
+              <img width="200" alt="Duck" src="assets/img/aflacduck1.png">
+            </div>
+
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>My claims</h2>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Date</th>
+                <th scope="col">Type</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+    
+            <tbody>
+              <tr> <!--*ngFor = let claim of allClaimsData -->
+                <th></th>
+               <!--<td>claim.claimid</td>--> 
+                <td>07/10/2021</td>
+                <td>Accident</td>
+                <td>Pending</td>
+                <td><a>View</a></td>
+              </tr>  
+            </tbody>
+          </table>
+    </section>
+
+</main>
+
+<!--footer-->
+<app-footer></app-footer>

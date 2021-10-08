@@ -10,7 +10,7 @@ export class MdapiserviceService {
   constructor(private http:HttpClient) { }
 
   getAllCustomers (): Observable<object> {
-    const URL = `https://3sefuyoa3c.execute-api.eu-west-1.amazonaws.com/Stage/marbledCustomerTable`
+    const URL = `https://3sefuyoa3c.execute-api.eu-west-1.amazonaws.com/Stage/marbledCustomerTable`;
     return this.http.get<object>(URL)
   }
   
@@ -28,14 +28,16 @@ export class MdapiserviceService {
 
   createNewCustomer(contents:any)
   {
-    const URL = `https://3sefuyoa3c.execute-api.eu-west-1.amazonaws.com/Stage/marbledCustomerTable`;
-    let header = new Headers()
-    header.append("Access-Control-Allow-Origin", "*")
-    header.append("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS")
-    header.append("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With")
-    const body=JSON.stringify(contents);
-    console.log(body);
-    //return this.http.post(URL, body, header);
+    const URL = `https://3sefuyoa3c.execute-api.eu-west-1.amazonaws.com/Stage/marbledCustomerTable`
+    return fetch(URL,{
+      method: "POST",
+      body: JSON.stringify(contents),
+      headers: {"Content-type": "application/json"}
+    })
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(err => console.log(err));
+
   
   }
 }

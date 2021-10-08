@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { AdminComponent } from './admin/admin.component';
 import { ContactComponent } from './contact/contact.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'admin', component: AdminComponent },
   //CATCH ALL wildcard thing only implement when others are working otherwise everything will fail - could implement 404 component? 
   { path: '**', component: HomepageComponent }
 ];

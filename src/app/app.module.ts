@@ -13,6 +13,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { AdminComponent } from './admin/admin.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { ContactComponent } from './contact/contact.component';
     HomepageComponent,
     DashboardComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
