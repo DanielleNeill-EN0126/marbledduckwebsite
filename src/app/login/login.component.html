@@ -21,7 +21,7 @@
                 <label for="password" class="mt-4">Password</label>
                 <input type="password" name="password" id="password" placeholder="password" [(ngModel)]="password">
                 <br>
-                <button class="btn mt-3" (click)="logIn()">Login</button>
+                <button class="btn mt-3" id="login-submit" (click)="logIn()">Login</button>
                 <h5 class="error-msg mt-3">{{loginStatus}}</h5>
             </form>
 
